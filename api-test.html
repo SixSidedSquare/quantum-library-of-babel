@@ -5,11 +5,29 @@
     <title>title</title>
     <script type="text/javascript" src="page-generator.js"></script>
     <script type="text/javascript" src="quantum-bitstream.js"></script>
+
+    <script type="text/javascript">
+      function generatePage() {
+        var text;
+        try {
+          text = qBits.getBits('book_page');
+        } catch (e) {
+
+        }
+      }
+    </script>
   </head>
   <body>
 
-    <button onclick="javascript:qBits.getBits()">Click me!</button>
-    <p id="json_success"></p>
+    <!--
+    Each wall of each hexagon is furnished with five bookshelves; each
+    bookshelf holds thirty-two books identical in format; each book contains
+    four hundred ten pages; each page, forty lines; each line, approximately
+    eighty black letters. There are also letters on the front cover of each book;
+    those letters neither indicate nor prefigure what the pages inside will say.
+    -->
+
+    <button onclick="javascript:generatePage()">Click me!</button>
     <p id="book_page"></p>
   </body>
 </html>
