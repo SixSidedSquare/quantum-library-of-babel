@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Quantum Library of Babel</title>
+    <script type="text/javascript" src="quantum-bitstream.js"></script>
+
+    <script type="text/javascript">
+      function generatePage() {
+        var text;
+        try {
+          text = qBits.getBits('page_text');
+        } catch (e) {
+
+        }
+      }
+    </script>
+
+    <style type="text/css">
+      body {
+        background-color: #F6F6F6;
+      }
+      button {
+        margin:0 auto;
+        display:block;
+        font-family: serif;
+      	font-size: 16px;
+      	font-weight: bold;
+      }
+
+      h1 {
+        font-family:cursive;
+        text-align: center;
+      }
+      .book_page {
+          border:3px double;
+          background-color: #FFFFFF;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10px;
+          min-height: 1200px;
+          width: 640px;
+          padding: 30px;
+      }
+      .page_text {
+        font-family:cursive;
+        font-size:18px;
+        white-space:pre-wrap;
+      }
+
+      .menu {
+        text-align:center;
+      }
+      .menu ul {
+        border:1px solid;
+        display:inline-table;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .menu ul li {
+        display:inline;
+        float: left;
+      }
+
+      .menu a:link, a:visited {
+        display: block;
+        width: 160px;
+        font-weight: bold;
+        color: #000000;
+        background-color: #D6D6D6;
+        text-align: center;
+        padding: 4px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .menu a:hover, a:active {
+        background-color: #B6B6B6;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!--
+    Each wall of each hexagon is furnished with five bookshelves; each
+    bookshelf holds thirty-two books identical in format; each book contains
+    four hundred ten pages; each page, forty lines; each line, approximately
+    eighty black letters. There are also letters on the front cover of each book;
+    those letters neither indicate nor prefigure what the pages inside will say.
+    -->
+
+    <h1>The Quantum Library of Babel.</h1>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="https://libraryofbabel.info/Borges/libraryofbabel.pdf">The Story</a></li>
+        <li><a href="http://qrng.anu.edu.au/index.php">The Science</a></li>
+      </ul>
+    </div>
+    </br>
+    <button onclick="javascript:generatePage()">Open a quantum page</button>
+    <div class="book_page">
+      <pre id="page_text" class="page_text"></pre>
+    <div>
+  </body>
+</html>
